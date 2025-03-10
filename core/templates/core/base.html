@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>{% block title %}{% endblock %} | merawi </title>
+</head>
+<body class="bg-gray-700 min-h-screen flex flex-col">
+    <nav class="m-3 p-6 grid grid-rows-1 gap-3 lg:flex  lg:justify-between items-center 2xl:flex 2xl:justify-center">
+        <div class="">
+            <a href="{% url 'home_view' %}" class="flex items-center"><img class="border-white border rounded-full" src="{% static 'images/ppic.jpg' %}" style="width: 50px; height: 50px;">
+                <h1 class="text-teal-400 hover:text-teal-500 text-3xl font-comicsan">MerawiYohannes</h1>
+                </a>
+        </div>
+
+        <!-- <button id="menu_btn" class="sm:hidden text-5xl hover:text-white">
+            ≡
+        </button> -->
+
+        <div id="menu" class="grid grid-rows-1 gap-3 md:flex">
+            <a href="{% url 'home_view' %}" class="text-white text-xl  border-white px-4 py-2 border-b border-white rounded-full hover:text-gray-300 hover:border-gray-500">Home</a>
+            <a href="{% url 'aboutme_view' %}" class="text-white text-xl border-b border-white px-4 py-2 rounded-full hover:text-gray-300 hover:border-gray-500">AboutMe</a>
+            <a href="{% url 'adress_view' %}" class="text-white text-xl border-b border-white px-4 py-2 rounded-full hover:text-gray-300 hover:border-gray-500">Adress</a>
+            <a href="{% url 'contact_view' %}" class="text-white text-xl border-b border-white px-4 py-2 rounded-full hover:text-gray-300 hover:border-gray-500">Contact Form</a>
+
+        </div>
+    </nav>
+
+    <div class="flex-1">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <footer class=" flex justify-center gap-6 p-4">
+        <a href="https://github.com/merawiyohannes" class="flex items-center text-white hover:text-gray-400 space-x-2">
+            <img src="{% static 'images/github.png' %}" class="w-10 h-10 rounded-full shadow-md hover:shadow-lg border border-white hover:border-gray-400">
+            <span class="">GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/merawi-yohannes-6317a4339/" class="flex items-center text-white hover:text-gray-400 space-x-2">
+            <img src="{% static 'images/ld.png' %}" class="w-8 h-8 rounded-full border border-white hover:border-gray-400">
+            <span class="">LinkedIn</span>
+        </a>
+        
+    </footer>
+    <script>
+        document.getElementById('menu_btn').addEventListener('click', function () {
+            let menu = document.getElementById('menu');
+            menu.classList.toggle('hidden');  // Show/hide menu
+            menu.classList.toggle('flex');    // Make it flex when shown
+            menu.classList.toggle('flex-col'); // Stack items vertically on small screens
+
+            
+        });
+    </script>
+</body>
+</html>

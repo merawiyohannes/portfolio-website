@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} welcome to {% endblock %}
+
+{% block content %}
+<div class="sm:grid sm:grid-cols-2 gap-5">
+     <div class="max-w-3xl p-7 m-4 ">
+          <h1 class="text-3xl text-white">Hi, Welcome.</h1>
+          <h2 class="text-3xl text-white">I am <strong class="text-teal-400 ">Merawi Yohannes.</strong></h2>
+          <p class="p-3 mt-3 space-y-2 text-gray-200 leading-relaxed max-w-2xl">Welcome to My Space
+               I’m Merawi, a thinker, observer, and builder.
+               I reflect on the past, question the present, and shape the future through code and creativity.
+               This is where I share my journey—projects I’m working on, thoughts that keep me up at night,
+               and ideas that might just make a difference.</p>
+               <a href="{% url 'aboutme_view' %}" class=" ml-2 inline-block px-4 py-2 text-white bg-teal-500 hover:bg-teal-700 hover:-translate-y-0.5 transform  rounded-xl">Read More</a>     
+     </div>
+
+     <div class="max-w-3xl p-4 m-4 ">
+          <img src="{% static 'images/newmeri.png' %}" class="w-full object-cover  rounded-xl mix-blend-auto">
+     </div>
+</div>
+
+<div class="my-7 flex  sm:justify-center items-center">
+     <h1 class=" text-gray-200 text-center italic lg:text-2xl">"Whatever the situation you're in, remember **time passes**, so be **patient**!"</h1>
+</div>
+
+{% endblock %}

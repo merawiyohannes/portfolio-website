@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}contact me {% endblock %}
+{% block content %}
+<div class="border border-teal-500 rounded-xl shadow-md m-10 p-10 bg-gray-900 
+max-w-lg mx-auto">
+    <h1 class="text-2xl text-gray-200 text-center">Contact Form</h1>
+    <form method="POST" class="space-y-7 ">
+        {% csrf_token %}
+        <div class=""><label for="name" class="text-xl text-gray-300">Name</label><br>
+            {{ form.name  }}
+        </div>
+
+        <div class=""><label for="email" class="text-xl text-gray-300">Email</label><br>
+            {{ form.email  }}
+        </div>
+
+        <div class=""><label for="message" class="text-xl text-gray-300">Message</label><br>
+            {{ form.message  }}
+        </div>
+        <div class="sm:text-right">
+            <input type="submit" value="send" class="w-full text-lg sm:text-2xl text-white px-3 py-2 rounded-xl bg-teal-500 hover:bg-teal-700">
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}

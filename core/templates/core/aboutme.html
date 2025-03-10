@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} About Me {% endblock %}
+    
+{% block content %}
+<div class="grid sm:grid-cols-2 sm:gap-2 grid-cols-1">
+    <div class=" max-w-3xl mx-auto border border-teal-500 rounded-xl shadow-md p-7 m-3">
+        <h1 class="text-4xl font-bold text-white mb-4">About Me</h1>
+        <p class="xl:text-xl text-gray-300 text-lg leading-relaxed">
+            Hey, I’m <span class="text-teal-400 font-semibold">Merawi Yohannes</span>—a thinker, observer, and builder. I don’t just write code; I write stories through logic, structure, and creativity. My mind is wired to question, analyze, and break things apart just to see how they work.
+        </p>
+        <p class="xl:text-xl text-gray-300 text-lg leading-relaxed mt-4">
+            I left my job to dive deep into Django because I believe in building something real—something that matters. Every line of code I write is a reflection of my thoughts, my struggles, and my vision for the future. I learn by doing, by failing, by fixing, and by understanding—not just following tutorials like a machine.
+        </p>
+        <p class="xl:text-xl text-gray-300 text-lg leading-relaxed mt-4">
+            I see the world differently. I notice things others don’t. I connect past, present, and future, always searching for meaning behind everything. This mindset shapes not only my coding but also my life.
+        </p>
+        <p class="xl:text-xl text-gray-300 text-lg leading-relaxed mt-4">
+            I believe in <span class="text-teal-400 font-semibold">simplicity and depth.</span> I don’t like unnecessary noise, distractions, or fake hype. I prefer clean design, real thoughts, and meaningful conversations. That’s why my projects are simple but powerful—focused on what truly matters.
+        </p>
+        <p class="xl:text-xl text-gray-300 text-lg leading-relaxed mt-4">
+            At the end of the day, I’m here to <span class="text-teal-400 font-semibold">build, learn, and share.</span> Whether it’s through code, ideas, or the raw realities of life, this is my space. And if you're here, welcome. Let’s create something that lasts.
+        </p>
+    </div>
+    <div class="max-w-3xl mx-auto border border-teal-500 rounded-xl shadow-md p-7 m-3">
+        <h2 class="text-4xl font-bold text-white mb-4">What I’m Learning & Building</h2>
+        <ol class="text-gray-200 space-y-3">
+             <li class="flex items-center space-x-2"><img src="{% static 'images/python.png' %}" class="rounded-xl w-5 h-5"> <span class="xl:text-xl ">Python</span></li>
+             <li class="flex items-center space-x-2"><img src="{% static 'images/tk.jpg' %}" class="rounded-xl w-5 h-5 "> <span class="xl:text-xl ">Tkinter</span></li>
+             <li class="flex items-center space-x-2"><img src="{% static 'images/dj.png' %}" class="rounded-xl w-5 h-5 "> <span class="xl:text-xl ">Django & Backend Development</span></li>
+             <li class="flex items-center space-x-2"><img src="{% static 'images/tw.jpg' %}" class="rounded-xl w-5 h-5 "> <span class="xl:text-xl ">Tailwind CSS for clean UI</span></li>
+             <li class="flex items-center space-x-2"><img src="{% static 'images/git.png' %}" class="rounded-xl w-5 h-5 "> <span class="xl:text-xl ">Git & Deployment</span></li>
+             <li class="flex items-center space-x-2"><img src="{% static 'images/project.jpg' %}" class="rounded-xl w-5 h-5 "><span class="xl:text-xl "> Building real-world projects</span></li>
+        </ol>
+   </div>
+</div>
+{% endblock %}
