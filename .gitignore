@@ -1,0 +1,14 @@
+# Python
+*.pyc
+__pycache__/
+*.pyo
+
+# Env
+.env
+env/
+
+
+# SQLite database (if used locally)
+db.sqlite3
+
+
