@@ -7,6 +7,6 @@ class Contact(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
-        return f"{self.name} | {self.created_at.strftime("%a, %b%d, %I:%M %p")}"
+        return f"{self.name} | {self.created_at}"
     
     
