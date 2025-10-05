@@ -1,62 +1,202 @@
-{% extends 'core/base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 
-{% block title %} My-Projects {% endblock %}
+{% block title %} My Projects {% endblock %}
 
 {% block content %}
-<h1 class="text-center text-teal-400 font-semibold text-3xl mb-8">My Projects</h1>
+<div class="max-w-7xl mx-auto px-6 py-16">
+    <!-- Header Section -->
+    <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">My Projects</h1>
+        <div class="w-24 h-1 bg-gray-300 mx-auto mb-4"></div>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+            A collection of projects I've built with modern technologies and clean code
+        </p>
+    </div>
 
-<div class="grid lg:grid-cols-3 md:grid-cols-2 gap-6 px-4">
-    <!-- Project 1 -->
-    <a href="https://ale-shopping.onrender.com" target="_blank" class="group">
-        <div class="rounded-2xl overflow-hidden bg-gray-900 border border-teal-500 transition transform hover:scale-[1.02] hover:shadow-xl duration-300">
-            <img src="{% static 'images/s.png' %}" alt="Shopping Site" class="h-96 w-full object-cover">
-            <div class="p-5 space-y-2">
-                <h2 class="text-2xl font-bold text-yellow-400 group-hover:underline">Shopping Site</h2>
-                <p class="text-gray-300 text-sm leading-relaxed">
-                    A responsive eCommerce platform built with Django & Tailwind. Features include product listings, user login/signup, live chat system, and filter search.
-                </p>
+    <div class="grid lg:grid-cols-2 gap-8">
+        <!-- Project 1 - Nova Skin Care -->
+        <a href="https://nova-9mjw.onrender.com" target="_blank" class="group">
+            <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 group-hover:border-gray-300">
+                <div class="h-64 bg-gradient-to-br from-pink-500 to-purple-600 relative overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-white text-center p-6">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold">Beauty & Wellness</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-xl font-bold text-gray-900 group-hover:text-purple-600 transition">Nova Skin Care & Hair Center</h2>
+                        <span class="text-gray-400 group-hover:text-gray-600 transition">→</span>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Complete business solution featuring a public website and staff management system. Includes appointment booking, client management, service catalog, and administrative dashboard.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-pink-100 text-pink-800 text-xs px-3 py-1 rounded-full">Django</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">Tailwind</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">PostgreSQL</span>
+                        <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Staff System</span>
+                        <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Booking</span>
+                    </div>
+                </div>
             </div>
-        </div>
-    </a>
+        </a>
 
-    <!-- Project 2 -->
-    <a href="https://dr-selam.onrender.com" target="_blank" class="group">
-        <div class="rounded-2xl overflow-hidden bg-gray-900 border border-teal-500 transition transform hover:scale-[1.02] hover:shadow-xl duration-300">
-            <img src="{% static 'images/selam.png' %}" alt="Dr. Selam Website" class="h-96 w-full object-cover">
-            <div class="p-5 space-y-2">
-                <h2 class="text-2xl font-bold text-yellow-400 group-hover:underline">Dr. Selam Tesfaye’s Website</h2>
-                <p class="text-gray-300 text-sm leading-relaxed">
-                    A personal branding site built with Django and Tailwind for Dr. Selam — featuring blog-style medical posts, profile highlights, and contact forms.
-                </p>
+        <!-- Project 2 - Shopping Site -->
+        <a href="https://ale-shopping.onrender.com" target="_blank" class="group">
+            <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 group-hover:border-gray-300">
+                <div class="h-64 bg-gradient-to-br from-blue-500 to-blue-600 relative overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-white text-center p-6">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold">E-Commerce Platform</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition">Shopping Site</h2>
+                        <span class="text-gray-400 group-hover:text-gray-600 transition">→</span>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        A responsive eCommerce platform built with Django & Tailwind. Features include product listings, user authentication, real-time chat, and advanced search filters.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Django</span>
+                        <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Tailwind</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">PostgreSQL</span>
+                        <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Real-time Chat</span>
+                    </div>
+                </div>
             </div>
-        </div>
-    </a>
+        </a>
 
-    <!-- Project 3 -->
-    <a href="https://www.tiktok.com/@paje390/video/7514623238157126918" target="_blank" class="group">
-        <div class="rounded-2xl overflow-hidden bg-gray-900 border border-teal-500 transition transform hover:scale-[1.02] hover:shadow-xl duration-300">
-            <img src="{% static 'images/c4.png' %}" alt="Clinic App" class="h-96 w-full object-cover">
-            <div class="p-5 space-y-2">
-                <h2 class="text-2xl font-bold text-yellow-400 group-hover:underline">Health For All – Desktop App</h2>
-                <p class="text-gray-300 text-sm leading-relaxed">
-                    A desktop patient management system using Python (Tkinter). Registers patients, tracks history, and allows fast search with ID or name — built for small clinics. “Check out the app in action on TikTok!”
-                </p>
+        <!-- Project 3 - Dr. Selam Website -->
+        <a href="https://dr-selam.onrender.com" target="_blank" class="group">
+            <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 group-hover:border-gray-300">
+                <div class="h-64 bg-gradient-to-br from-green-500 to-green-600 relative overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-white text-center p-6">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold">Medical Portfolio</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-xl font-bold text-gray-900 group-hover:text-green-600 transition">Dr. Selam Tesfaye</h2>
+                        <span class="text-gray-400 group-hover:text-gray-600 transition">→</span>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        A professional medical portfolio website featuring blog-style posts, profile highlights, and contact forms. Built with Django and Tailwind CSS.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Django</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">Tailwind</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Blog System</span>
+                        <span class="bg-red-100 text-red-800 text-xs px-3 py-1 rounded-full">Contact Forms</span>
+                    </div>
+                </div>
             </div>
-        </div>
-    </a>
+        </a>
 
-    <!-- Project 4 -->
-    <a href="https://merawi.onrender.com" target="_blank" class="group">
-        <div class="rounded-2xl overflow-hidden bg-gray-900 border border-teal-500 transition transform hover:scale-[1.02] hover:shadow-xl duration-300">
-            <img src="{% static 'images/merawi.png' %}" alt="Merawi Portfolio" class="h-96 w-full object-cover">
-            <div class="p-5 space-y-2">
-                <h2 class="text-2xl font-bold text-yellow-400 group-hover:underline">My Portfolio (Merawi)</h2>
-                <p class="text-gray-300 text-sm leading-relaxed">
-                    A fully custom Django + Tailwind portfolio site showcasing my skills and story. Built from scratch with a dev-focused layout and minimal design principles.
-                </p>
+        <!-- Project 4 - Health For All Desktop App -->
+        <a href="https://www.tiktok.com/@paje390/video/7514623238157126918" target="_blank" class="group">
+            <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 group-hover:border-gray-300">
+                <div class="h-64 bg-gradient-to-br from-purple-500 to-purple-600 relative overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-white text-center p-6">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold">Clinic Management</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-xl font-bold text-gray-900 group-hover:text-purple-600 transition">Health For All</h2>
+                        <span class="text-gray-400 group-hover:text-gray-600 transition">→</span>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        A desktop patient management system using Python and Tkinter. Features patient registration, medical history tracking, and fast search functionality.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Python</span>
+                        <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Tkinter</span>
+                        <span class="bg-red-100 text-red-800 text-xs px-3 py-1 rounded-full">Desktop App</span>
+                        <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Patient Management</span>
+                    </div>
+                    <div class="mt-3 text-sm text-purple-600 font-medium">
+                        Check out the demo on TikTok →
+                    </div>
+                </div>
             </div>
+        </a>
+
+        <!-- Project 5 - Portfolio Site -->
+        <a href="https://merawi.onrender.com" target="_blank" class="group">
+            <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 group-hover:border-gray-300">
+                <div class="h-64 bg-gradient-to-br from-gray-700 to-gray-900 relative overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-white text-center p-6">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold">Portfolio</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-xl font-bold text-gray-900 group-hover:text-gray-700 transition">My Portfolio</h2>
+                        <span class="text-gray-400 group-hover:text-gray-600 transition">→</span>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        A fully custom portfolio website built with Django and Tailwind CSS. Features a clean, minimal design focused on showcasing development skills and projects.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Django</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">Tailwind</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Responsive</span>
+                        <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Minimal Design</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="text-center mt-16">
+        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Like what you see?</h2>
+            <p class="text-gray-600 mb-6 max-w-md mx-auto">
+                I'm always open to discussing new projects and creative opportunities.
+            </p>
+            <a href="{% url 'contact_view' %}" class="inline-flex items-center bg-black text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition">
+                Start a Conversation
+                <span class="ml-2">→</span>
+            </a>
         </div>
-    </a>
+    </div>
 </div>
 {% endblock %}

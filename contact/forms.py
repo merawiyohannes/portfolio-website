@@ -2,30 +2,26 @@ from django import forms
 from .models import Contact
 
 class ContactForm(forms.ModelForm):
-
     class Meta:
-        CLASS_VAR = " px-3 py-2 w-full rounded-xl bg-gray-600 text-white border border-teal-500 shadow-md"
         model = Contact
         fields = ("name", "email", "message")
         widgets = {
             "message": forms.Textarea(attrs={
-                "placeholder":"type your message...",
-                "class": f"{CLASS_VAR} h-28 resize-none align-top",
-                "id":"message"
+                "placeholder": "Type your message...",
+                "class": "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300 resize-none",
+                "id": "message",
+                "rows": "6"
             }),
             
             "name": forms.TextInput(attrs={
-                "placeholder": "Enter your name",
+                "placeholder": "Enter your full name",
                 "id": "name",
-                "class": CLASS_VAR,
+                "class": "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300"
             }),
             
             "email": forms.EmailInput(attrs={
-                "placeholder": "email adress",
-                "id": "email",
-                "class": CLASS_VAR
+                "placeholder": "Enter your email address",
+                "id": "email", 
+                "class": "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300"
             })
         }
-    
-        
-        

@@ -1,63 +1,126 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %} welcome to {% endblock %}
+{% block title %} Welcome {% endblock %}
 
 {% block content %}
-<div class="sm:grid sm:grid-cols-2 gap-5">
-    <div class="max-w-3xl p-7 m-4">
-        <h1 class="text-3xl text-white">Hi, Welcome.</h1>
-        <h2 class="text-3xl text-white">I am <strong class="text-teal-400">Merawi Yohannes.</strong></h2>
-        <p class="p-3 mt-3 space-y-2 text-gray-200 leading-relaxed max-w-2xl">
-            Welcome to My Space I’m Merawi, a thinker, observer, and builder.
-            I reflect on the past, question the present, and shape the future through code and creativity.
-            This is where I share my journey—projects I’m working on, thoughts that keep me up at night,
-            and ideas that might just make a difference.
-        </p>
-        <a href="{% url 'aboutme_view' %}"
-           class="ml-2 inline-block px-4 py-2 text-white bg-teal-500 hover:bg-teal-700 hover:-translate-y-0.5 transform rounded-xl">
-           Read More
-        </a>
-
-        <div class="grid grid-cols-1 gap-6 mt-6">
-          <h1 class="text-3xl text-yellow-400 font-semibold">My Projects</h1>
-          <a href="{% url 'myprojects_view' %}" class="">
-            <div class="rounded-xl overflow-hidden bg-gray-900 transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-                <img src="{% static 'images/s.png' %}" alt="Shopping Site" class="h-40 w-full object-cover">
-                <div class="p-4">
-                    <h3 class="text-lg font-semibold text-yellow-400">Shopping Site</h3>
-                    <p class="text-gray-300 text-sm">A responsive eCommerce site with user auth and chat.</p>
-                </div>
-            </div>
-          </a>
-          <a href="{% url 'myprojects_view' %}" class="">
-            <div class="rounded-xl overflow-hidden bg-gray-900 transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-                <img src="{% static 'images/c4.png' %}" alt="Clinic App" class="h-40 w-full object-cover">
-                <div class="p-4">
-                    <h3 class="text-lg font-semibold text-yellow-400">Clinic App</h3>
-                    <p class="text-gray-300 text-sm">Clinic management system with patient records and inventory tracking.</p>
-                </div>
-            </div>
-          </a>
+<div class="max-w-4xl mx-auto px-6 py-16">
+    <!-- Hero Section -->
+    <div class="text-center mb-20">
+        <div class="w-32 h-32 mx-auto mb-8 rounded-full overflow-hidden border-4 border-white shadow-lg">
+            <img src="{% static 'images/newpic.jpg' %}" class="w-full h-full object-cover" alt="Merawi Yohannes">
         </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Merawi Yohannes
+        </h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Developer & Creative Thinker building meaningful solutions through code
+        </p>
+    </div>
 
-        <div class="flex flex-col justify-center items-center text-center mt-6">
-            <h2 class="text-2xl text-teal-400 font-bold mb-3">Curious to see more?</h2>
-            <p class="text-gray-300 mb-4 max-w-xs">Check out all my projects and learn more about the tools and ideas behind them.</p>
-            <a href="{% url 'myprojects_view' %}"
-               class="inline-block px-6 py-3 bg-yellow-400 text-gray-900 font-semibold rounded-xl hover:bg-yellow-300 transition">
-               See All Projects
+    <!-- About Section -->
+    <div class="mb-16">
+        <div class="bg-gray-50 rounded-2xl p-8 md:p-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-6">My Journey</h2>
+            <p class="text-gray-700 leading-relaxed text-lg mb-6">
+                I'm a builder at heart, passionate about creating digital experiences that make a difference. 
+                Through code and creativity, I transform ideas into reality, always learning and evolving along the way.
+            </p>
+            <a href="{% url 'aboutme_view' %}" class="inline-flex items-center text-gray-900 font-medium hover:text-gray-700">
+                Learn more about my journey
+                <span class="ml-2">→</span>
             </a>
         </div>
     </div>
 
-    <div class="max-w-3xl p-4 m-4">
-        <img src="{% static 'images/newpic.jpg' %}" class="w-full object-cover rounded-xl mix-blend-auto">
+    <!-- Projects Preview -->
+    <div class="mb-16">
+        <div class="flex items-center justify-between mb-8">
+            <h2 class="text-2xl font-semibold text-gray-900">Recent Work</h2>
+            <a href="{% url 'myprojects_view' %}" class="text-gray-600 hover:text-gray-900 font-medium">
+                View all
+            </a>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Shopping Site Card -->
+            <a href="{% url 'myprojects_view' %}" class="block group">
+                <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="project-icon w-14 h-14 rounded-xl flex items-center justify-center shadow-lg">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                        <span class="text-gray-400 group-hover:text-gray-600 transition">→</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">E-Commerce Platform</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Modern shopping experience with secure payments, user accounts, and real-time inventory management.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Django</span>
+                        <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">React</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">PostgreSQL</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Clinic App Card -->
+            <a href="{% url 'myprojects_view' %}" class="block group">
+                <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="clinic-icon w-14 h-14 rounded-xl flex items-center justify-center shadow-lg">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            </svg>
+                        </div>
+                        <span class="text-gray-400 group-hover:text-gray-600 transition">→</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Clinic Management System</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Comprehensive healthcare solution for patient records, appointments, and medical inventory tracking.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-red-100 text-red-800 text-xs px-3 py-1 rounded-full">Python</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Vue.js</span>
+                        <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">MySQL</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="text-center mb-16">
+        <div class="bg-gradient-to-r from-gray-900 to-black text-white rounded-2xl p-8 md:p-12">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to start a project?</h2>
+            <p class="text-gray-300 mb-6 max-w-md mx-auto">
+                Let's work together to bring your ideas to life with clean, efficient code.
+            </p>
+            <a href="{% url 'contact_view' %}" class="inline-flex items-center bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition">
+                Get in touch
+                <span class="ml-2">→</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Philosophy -->
+    <div class="text-center">
+        <div class="border border-gray-200 rounded-2xl p-8 md:p-12">
+            <p class="text-xl md:text-2xl text-gray-700 italic mb-4">
+                "Time passes, so be patient. Every challenge is temporary, every effort compounds."
+            </p>
+            <p class="text-gray-500">— My guiding principle</p>
+        </div>
     </div>
 </div>
 
-<div class="my-7 flex sm:justify-center items-center">
-    <h1 class="text-gray-200 text-center italic lg:text-2xl">
-        "Whatever the situation you're in, remember <strong>time passes</strong>, so be <strong>patient</strong>!"
-    </h1>
-</div>
+<style>
+    .project-icon {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    .clinic-icon {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    }
+</style>
 {% endblock %}
